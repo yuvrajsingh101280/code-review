@@ -21,7 +21,7 @@ const App = () => {
     try {
       setLoader(true); // Show loader when request starts
       const response = await axios.post(
-        "http://localhost:8000/ai/code-review",
+        "https://code-review-one-xi.vercel.app/ai/code-review",
         {
           code,
         }
