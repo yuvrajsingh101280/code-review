@@ -15,3 +15,18 @@ app.listen(port, () => {
 
 })
 app.use("/ai", aiRoute)
+const url = "https://code-review-1-qc2x.onrender.com";
+const interval = 30000;
+
+function reloadWebsite() {
+    axios
+        .get(url)
+        .then((res) => {
+            console.log("Website reloaded");
+        })
+        .catch((err) => {
+            console.log(`Error : ${err}`);
+        });
+}
+
+setInterval(reloadWebsite, interval);
