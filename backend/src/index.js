@@ -10,6 +10,10 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 const port = process.env.PORT || 8000
+app.get("/", (req, res) => {
+    res.send("AI Server is Running 🚀");
+});
+
 app.listen(port, () => {
 
     console.log(`server starting at http://localhost:${port}`)
