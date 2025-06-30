@@ -12,7 +12,7 @@ const App = () => {
   const [loader, setLoader] = useState(false); // Start with false
   const [review, setReview] = useState("");
   const [code, setCode] = useState(`function sum() {\n  return 1 + 1;\n}`);
-
+  const [language, setLanguage] = useState("javascript");
   useEffect(() => {
     prism.highlightAll();
   }, []);
