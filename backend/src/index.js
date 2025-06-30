@@ -2,6 +2,7 @@ import express from "express"
 import dotenv from "dotenv"
 import aiRoute from "./routes/ai.routes.js"
 import cors from "cors"
+import axios from "axios"
 dotenv.config()
 
 
@@ -15,6 +16,9 @@ app.listen(port, () => {
 
 })
 app.use("/ai", aiRoute)
+
+
+// code for production deploy
 const url = "https://code-review-1-qc2x.onrender.com";
 const interval = 30000;
 
